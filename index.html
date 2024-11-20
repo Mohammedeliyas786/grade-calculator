@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade calculator</title>
+    <style>
+        .one{
+            text-align: center;
+            
+        }
+        body{
+            background-color: rgb(96, 135, 208);
+        }
+        h1{
+            color: rgb(11, 65, 97);
+        }
+        .com{
+           margin-left: -16px;
+        }
+        .math{
+           margin-left: 8px;
+        }
+        .btn{
+            background-color: rgb(26, 121, 204);
+            border-radius: 50px;
+            width: 80px;
+            font-weight: 700;
+            padding: 5px;
+            margin-left:60px ;
+        }
+        input
+        {
+            border-radius: 30px;
+            border-color: rgb(2, 24, 64);
+           
+
+        }
+        form{
+            margin-right: 70px;
+            width: 100%;
+            height: auto;
+        }
+        span{
+            color: aliceblue;
+        }
+        
+    </style>
+    <script>
+        var a;
+        var b;
+        var c;
+        var d;
+        var e;
+        var result=0;
+        var percentage=0;
+
+        function calculate ()
+        {
+            a=parseInt(form1.txtnum1.value);
+            b=parseInt(form1.txtnum2.value);
+            c=parseInt(form1.txtnum3.value);
+            d=parseInt(form1.txtnum4.value);
+            e=parseInt(form1.txtnum5.value);
+            result=a+b+c+d+e;
+
+            percentage = result/5;
+
+            document.write("Total:"+"<b>"+result+"<b>"+"<br>");
+                document.write("Percentage:"+"<b>"+percentage+"<b>"+"<br>");
+                    document.write("Grade:")
+if(percentage>=91)
+{
+    document.write("A")
+
+}
+else if(percentage>=81)
+    {
+        document.write("B")
+    }
+    else  if(percentage>=71)
+        {
+            document.write("C")
+        }
+        else  if(percentage>=61)
+            {
+                document.write("D")
+            }
+            else  if(percentage>=51)
+                {
+                    document.write("E")
+                }
+                else  if(percentage<=50)
+                    {
+                        document.write("Fail")
+                    } 
+
+        }
+      
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <div class="one">
+    <h1>Student Marks Calculation</h1>
+    <h2>Name:<span>Mohammed</span></h2>
+    <h2>S/No: 10001</h2>
+    <form name="form1">
+        <b>English :</b> <input type="textbox" name="txtnum1"><br><br>
+        <b class="math">Maths :</b> <input type="textbox" name="txtnum2"><br><br>
+        <b class="com">Computer :</b> <input type="textbox" name="txtnum3"><br><br>
+        <b>Physics :</b> <input type="textbox" name="txtnum4"><br><br>
+        <b>Biology :</b> <input type="textbox" name="txtnum5"><br><br>
+        <input class="btn" type="button" value="calculate" onclick="calculate()">
+    </form>
+    </div>
+</body>
+</html>
